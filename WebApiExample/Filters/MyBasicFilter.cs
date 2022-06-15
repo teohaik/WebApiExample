@@ -57,9 +57,10 @@ namespace SimpleDotNetWebAPI
             ca.Request.Headers.Add("Iron", "Man");
 
 
-            context.HttpContext.Response.Headers.Add("responseHeaderKey", "Value");
-            context.HttpContext.Response.Headers.Add("responseHeaderKey2", "Value2");
-            context.HttpContext.Response.Headers.Add("responseHeaderKey3", "Value3");
+
+            Guid myuuid = Guid.NewGuid();
+
+            context.HttpContext.Response.Headers.Add("uuid", myuuid.ToString());
 
         }
     }
